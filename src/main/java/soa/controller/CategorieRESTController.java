@@ -49,4 +49,5 @@ public class CategorieRESTController {  // Mettez à jour le nom de la classe
     public void deleteCategorie(@RequestBody Categorie c) {
         categorieRepos.delete(c);
     }
+
 }

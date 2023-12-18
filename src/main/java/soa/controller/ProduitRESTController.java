@@ -93,5 +93,10 @@ public class ProduitRESTController {
     {
         produitRepos.delete(p);
     }
+    
+    @GetMapping(value = "/par-categorie/{categorieId}", produces = { MediaType.APPLICATION_JSON_VALUE })
+    public List<Produit> getProduitsByCategorie(@PathVariable Long categorieId) {
+        return produitRepos.findByCategorieId(categorieId);
+    }
 
 }
